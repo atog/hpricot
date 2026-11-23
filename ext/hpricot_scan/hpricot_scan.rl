@@ -754,7 +754,7 @@ static VALUE hpricot_struct_ref7(VALUE obj) {return H_ELE_GET(obj, 7);}
 static VALUE hpricot_struct_ref8(VALUE obj) {return H_ELE_GET(obj, 8);}
 static VALUE hpricot_struct_ref9(VALUE obj) {return H_ELE_GET(obj, 9);}
 
-static VALUE (*ref_func[10])() = {
+static VALUE (*ref_func[10])(VALUE) = {
   hpricot_struct_ref0,
   hpricot_struct_ref1,
   hpricot_struct_ref2,
@@ -778,7 +778,7 @@ static VALUE hpricot_struct_set7(VALUE obj, VALUE val) {return H_ELE_SET(obj, 7,
 static VALUE hpricot_struct_set8(VALUE obj, VALUE val) {return H_ELE_SET(obj, 8, val);}
 static VALUE hpricot_struct_set9(VALUE obj, VALUE val) {return H_ELE_SET(obj, 9, val);}
 
-static VALUE (*set_func[10])() = {
+static VALUE (*set_func[10])(VALUE, VALUE) = {
   hpricot_struct_set0,
   hpricot_struct_set1,
   hpricot_struct_set2,
